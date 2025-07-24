@@ -1,0 +1,27 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+// トップ　メッセージ
+.p-message {
+  padding-block: 6.8rem 6rem;
+  @include sp {
+    padding-block: 4.9rem 4rem;
+  }
+  &__contents {
+    margin-top: 3rem;
+    @include sp {
+      margin-top: 1.4rem;
+    }
+  }
+  &__text {
+    text-align: center;
+    p {
+      font-size: 1.8rem;
+      color: #fff;
+      line-height: calc(30 / 18);
+    }
+  }
+}
+
+
+

@@ -1,0 +1,52 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+// ハンバーガー
+.c-hamburger {
+  width: 7.2rem;
+  height: 5rem;
+  display: block;
+  background: $red;
+  position: relative;
+  cursor: pointer;
+  z-index: 9998;
+  span {
+    position: absolute;
+    left: 2rem;
+    height: 0.4rem;
+    width: 3.2rem;
+    border-radius: 0.2rem;
+    background: #fff;
+    display: block;
+    transition: all 0.4s;
+    content: "";
+    cursor: pointer;
+    z-index: 9999;
+    &:nth-of-type(1) {
+      top: 1.3rem;
+    }
+    &:nth-of-type(2) {
+      top: 2.3rem;
+    }
+    &:nth-of-type(3) {
+      top: 3.3rem;
+    }
+  }
+  &.active {
+    span {
+      &:nth-of-type(1) {
+        top: 2.3rem;
+        transform: rotate(45deg);
+      }
+      &:nth-of-type(2) {
+        opacity: 0;
+        visibility: hidden;
+      }
+      &:nth-of-type(3) {
+        top: 2.3rem;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

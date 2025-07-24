@@ -1,0 +1,8 @@
+<!-- パンくずリスト -->
+<div class="c-breadcrumbs">
+  <div class="inner">
+    <?php if (function_exists('bcn_display')) {
+      bcn_display();
+    } ?>
+  </div>
+</div>

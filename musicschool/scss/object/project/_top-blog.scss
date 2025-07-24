@@ -1,0 +1,33 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+// トップ　ブログセクション
+.p-blog {
+  padding-block: 4rem 20.5rem;
+  @include sp {
+    padding-block: 3rem 19.1rem;
+  }
+  &__contents {
+    margin-top: 3.3rem;
+    @include sp {
+      margin-top: 3.8rem;
+    }
+  }
+  &__link {
+    margin-top: 3.7rem;
+    a {
+      color: #000;
+      font-size: 1.8rem;
+      line-height: calc(30 / 18);
+      font-weight: 500;
+      display: block;
+      text-align: right;
+      text-decoration: underline;
+      @include sp {
+        text-align: center;
+      }
+    }
+  }
+}
+
+

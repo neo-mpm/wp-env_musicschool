@@ -1,0 +1,38 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+// トップ　MV
+.p-top-mv {
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(80 80 80 / 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+  }
+  &__contents {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    h2 {
+      color: #fff;
+      font-size: vw(40, 1080);
+      font-weight: bold;
+      line-height: 1.5;
+      @include sp {
+        text-align: center;
+        font-size: 3rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+

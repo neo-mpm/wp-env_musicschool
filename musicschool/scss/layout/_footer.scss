@@ -1,0 +1,69 @@
+@use "../foundation/variable" as *;
+@use "../foundation/mixin" as *;
+
+.l-footer {
+  width: 100%;
+  background: $red;
+  color: #fff;
+  padding-block: 4.4rem 5rem;
+  text-align: center;
+  @include sp {
+    padding: 5rem 2rem 8rem;
+  }
+  &__nav {
+    margin-bottom: 2.17rem;
+    @include sp {
+      margin-bottom: 1.87rem;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      column-gap: 3.5rem;
+      @include sp {
+        flex-wrap: wrap;
+        column-gap: 3rem;
+      }
+      li {
+        a {
+          color: #fff;
+          font-size: 1.7rem;
+          line-height: calc(33 / 17);
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    a {
+      width: 3.2rem;
+      display: block;
+    }
+  }
+  &__copyright {
+    margin-bottom: 1rem;
+    line-height: calc(20 / 15);
+    @include sp {
+      margin-bottom: 1.6rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  &__sns-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.2rem;
+    li {
+      display: inline-block;
+      width: 2.2rem;
+    }
+  }
+}
+
+

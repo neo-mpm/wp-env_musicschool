@@ -1,0 +1,98 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+// トップ　生徒さんたちの声
+.p-voice {
+  padding-block: 6.4rem 6rem;
+  @include sp {
+    padding-block: 4.6rem 5rem;
+  }
+  .inner {
+    @include pc {
+      width: min(vw(915, 1000), 915px);
+    }
+  }
+  &__contents {
+    margin-top: 3.6rem;
+    @include sp {
+      margin-top: 3.9rem;
+    }
+  }
+  &__items {
+    position: relative;
+    width: 100%;
+  }
+  .p-voice-item {
+    margin-inline: 1.75rem;
+    display: block;
+    @include sp {
+      margin: 0;
+    }
+    &__img {
+      img {
+        aspect-ratio: 270 / 190;
+        object-fit: cover;
+        @include sp {
+          aspect-ratio: 335 / 200;
+        }
+      }
+    }
+    &__head {
+      margin-top: 1.7rem;
+      text-align: center;
+      @include sp {
+        margin-top: 2.7rem;
+      }
+      h3 {
+        font-size: 2.2rem;
+        line-height: calc(33 / 22);
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+    &__text {
+      margin-top: 1rem;
+      display: -webkit-box;
+      p {
+        font-size: 1.8rem;
+        line-height: calc(30 / 18);
+        color: #fff;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+      }
+    }
+  }
+  .slick-arrow {
+    width: 2.8rem;
+    height: 4rem;
+    position: absolute;
+    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    color: transparent;
+  }
+  .slick-next {
+    top: 38%;
+    right: -2.8rem;
+    background-image: url(../images/top/arrow-r.png) !important;
+    @include sp {
+      top: 39%;
+      right: 0.5rem;
+      background-image: url(../images/top/arrow-r-sp.png) !important;
+    }
+  }
+  .slick-prev {
+    top: 38%;
+    left: -2.8rem;
+    background-image: url(../images/top/arrow-l.png) !important;
+    @include sp {
+      top: 39%;
+      left: 0.5rem;
+      background-image: url(../images/top/arrow-l-sp.png) !important;
+    }
+  }
+}
+
+

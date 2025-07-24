@@ -1,0 +1,55 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+// bg
+.u-bg-red {
+  background: $red;
+}
+
+.u-bg-black {
+  background: #000;
+}
+
+// grid
+.u-grid-pc3sp1-g5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5rem;
+  @include sp {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 4.1rem;
+  }
+}
+
+.u-grid-pc3sp1-g106 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10.6rem;
+  row-gap: 6.1rem;
+  @include sp {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 4.1rem;
+  }
+}
+
+
+.u-item-bottom {
+  margin-bottom: 0 !important;
+}
+.u-flex {
+  display: flex !important;
+}
+.u-transform-180 {
+  transform: rotate(180deg);
+}
+// フェードイン
+.u-fadein {
+  opacity: 0;
+  transform: translate(0, 5rem);
+  transition: all 1s;
+}
+.u-fadein.reach {
+  opacity: 1;
+  transform: translate(0, 0);
+}

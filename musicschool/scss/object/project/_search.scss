@@ -1,0 +1,46 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+// 検索結果一覧
+.p-search-result {
+  padding-block: 6.6rem 21rem;
+
+  @include sp {
+    padding-block: 3.4rem 20.3rem;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 1.8rem;
+      line-height: calc(30 / 18);
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .p-blog-list__items {
+    margin-top: 4.2rem;
+
+    @include sp {
+      margin-top: 4rem;
+    }
+  }
+
+  &__no-result {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    align-items: center;
+
+    p {
+      font-size: 1.6rem;
+      line-height: calc(30 / 16);
+      text-align: center;
+    }
+  }
+}

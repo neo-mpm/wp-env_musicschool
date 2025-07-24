@@ -1,0 +1,71 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+// トップ　よくある質問
+.p-faq {
+  padding-block: 5rem 3rem;
+  @include sp {
+    padding-block: 3rem 1.8rem;
+  }
+  &__contents {
+    margin-top: 3.6rem;
+    @include sp {
+      margin-top: 3.9rem;
+    }
+  }
+  .p-faq-item {
+    border-bottom: 0.05rem solid #000;
+    &:first-of-type {
+      border-top: 0.05rem solid #000;
+    }
+    dt,
+    dd {
+      font-size: 1.7rem;
+      line-height: calc(30 / 17);
+      padding: 1.5rem 2rem;
+      padding-right: 2.9rem;
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      position: relative;
+      cursor: pointer;
+      @include sp {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+        padding: 1.3rem 0;
+        padding-right: 1.5rem;
+        padding-bottom: 1.2rem;
+      }
+    }
+    &__question {
+      color: #000;
+      font-weight: 500;
+    }
+    &__answer {
+      font-weight: bold;
+      color: $red;
+      background: rgba(203 0 0 / 0.1);
+    }
+    &__marker {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      display: grid;
+      place-content: center;
+    }
+    &__text {
+      flex: 1;
+    }
+    &__img {
+      width: 1.36rem;
+      transition: transform 0.4s;
+      &.is-active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,188 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.c-form {
+  &__input-area {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+
+    @include sp {
+      row-gap: 1.4rem;
+    }
+
+    dl {
+      display: flex;
+
+      @include sp {
+        flex-direction: column;
+      }
+
+      &:has(.checkbox-dd) {
+        @include pc {
+          margin-top: -0.7rem;
+        }
+      }
+
+      dt {
+        width: 17rem;
+        margin-top: 0.7rem;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: calc(30 / 20);
+
+        @include sp {
+          width: 100%;
+          margin-top: 0;
+          font-size: 1.6rem;
+          line-height: calc(33 / 16);
+        }
+      }
+
+      dd {
+        flex: 1;
+        font-size: 1.8rem;
+        line-height: calc(30 / 18);
+
+        @include sp {
+          font-size: 1.6rem;
+        }
+
+        input[type='text'],
+        input[type='email'],
+        input[type='tel'] {
+          width: 100%;
+          height: 4rem;
+          padding-inline: 2rem;
+          background: #fff;
+          border: 0.05rem solid #000;
+
+          @include sp {
+          }
+        }
+
+        textarea {
+          width: 100%;
+          height: 30rem;
+          padding: 1.4rem 2rem;
+          background: #fff;
+          border: 0.05rem solid #000;
+
+          @include sp {
+            height: 19rem;
+          }
+        }
+
+        ::placeholder {
+          color: rgb(178, 178, 178);
+
+          @include sp {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .checkbox-dd {
+        .wpcf7-list-item {
+          margin: 0;
+        }
+
+        .wpcf7-checkbox {
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.9rem;
+          align-items: flex-start;
+
+          @include sp {
+            row-gap: 1.3rem;
+          }
+        }
+
+        label {
+          cursor: pointer;
+
+          input[type='checkbox'] {
+            display: none;
+
+            & + span {
+              position: relative;
+              display: inline-block;
+              padding-left: 4rem;
+
+              @include sp {
+                padding-left: 3rem;
+              }
+
+              &::before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 2rem;
+                height: 2rem;
+                content: '';
+                border: 0.05rem solid #000;
+                transform: translateY(-50%);
+              }
+
+              &::after {
+                position: absolute;
+                top: 50%;
+                left: 0.2rem;
+                display: none;
+                width: 1.6rem;
+                height: 0.8rem;
+                content: '';
+                border-bottom: 0.2rem solid #000;
+                border-left: 0.4rem solid #000;
+                transform: translateY(calc(-50% - 0.2rem)) rotate(-50deg);
+              }
+            }
+
+            &:checked {
+              & + span {
+                &::after {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__submit-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+}
+
+.wpcf7-not-valid-tip {
+  margin-top: 6px;
+  color: $red;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  font-size: 1.8rem;
+  color: $red;
+  text-align: center;
+  border: none;
+
+  @include sp {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  font-size: 1.8rem;
+  color: $red;
+  text-align: center;
+  border: none;
+
+  @include sp {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}

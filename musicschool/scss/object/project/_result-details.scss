@@ -1,0 +1,100 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+// 卒業実績詳細
+.p-result-details {
+  padding-block: 7rem 16rem;
+  @include sp {
+    padding-block: 4rem 19.7rem;
+  }
+  &__img-area {
+    position: relative;
+    img {
+      aspect-ratio: 880 / 400;
+      object-fit: cover;
+      @include sp {
+        aspect-ratio: 335 / 236;
+      }
+    }
+  }
+  &__title {
+    margin-top: 5rem;
+    @include sp {
+      margin-top: 3rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      line-height: calc(40 / 25);
+      font-weight: bold;
+      @include sp {
+        font-size: 2rem;
+        line-height: calc(30 / 20);
+      }
+    }
+  }
+  &__date {
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+    @include sp {
+      margin-top: 0.6rem;
+    }
+  }
+  &__contents {
+    margin-top: 5.7rem;
+    @include sp {
+      margin-top: 2.1rem;
+    }
+  }
+  .p-result-details-profile {
+    display: flex;
+    column-gap: 4rem;
+    font-size: 1.8rem;
+    line-height: calc(29 / 18);
+    @include sp {
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+    &__table {
+      @include pc {
+        width: 40rem;
+      }
+      dl {
+        display: flex;
+        border-bottom: 0.05rem solid #707070;
+        &:first-of-type {
+          border-top: 0.05rem solid #707070;
+        }
+        dt,
+        dd {
+          padding: 0.4rem 2rem;
+          border-left: 0.05rem solid #707070;
+          @include sp {
+            padding: 0.41rem 1rem 0.4rem;
+          }
+        }
+        dt {
+          width: 14rem;
+          background: #e5e5e5;
+          @include sp {
+            width: 12rem;
+          }
+        }
+        dd {
+          flex: 1;
+          border-right: 0.05rem solid #707070;
+        }
+      }
+    }
+    &__text {
+      flex: 1;
+    }
+  }
+  &__pagination {
+    margin-top: 6rem;
+    @include sp {
+      margin-top: 4rem;
+    }
+  }
+}

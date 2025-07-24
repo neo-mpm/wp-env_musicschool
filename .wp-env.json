@@ -1,0 +1,25 @@
+{
+  "core": "https://ja.wordpress.org/latest-ja.zip",
+  "config": {
+    "WP_DEBUG": true,
+    "WP_HOME": "http://localhost:5500",
+    "WP_SITEURL": "http://localhost:5500"
+  },
+  "mappings": {
+    "wp-content/languages/plugins": "./languages/plugins",
+    "wp-content/uploads": "./uploads",
+    ".htaccess": "./.htaccess"
+  },
+  "plugins": [
+    "https://downloads.wordpress.org/plugin/show-current-template.latest-stable.zip",
+    "https://downloads.wordpress.org/plugin/custom-post-type-ui.latest-stable.zip",
+    "https://downloads.wordpress.org/plugin/duplicate-post.latest-stable.zip",
+    "https://downloads.wordpress.org/plugin/wp-pagenavi.latest-stable.zip",
+    "https://downloads.wordpress.org/plugin/breadcrumb-navxt.latest-stable.zip",
+    "https://downloads.wordpress.org/plugin/advanced-custom-fields.latest-stable.zip",
+    "https://downloads.wordpress.org/plugin/contact-form-7.latest-stable.zip",
+    "https://downloads.wordpress.org/plugin/wp-multibyte-patch.latest-stable.zip",
+    "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.latest-stable.zip"
+  ],
+  "themes": ["./musicschool"]
+}

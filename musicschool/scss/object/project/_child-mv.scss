@@ -1,0 +1,47 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+// 下層ページのMV
+.p-child-mv {
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(80 80 80 / 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+  }
+  &__image {
+    img {
+      aspect-ratio: 1080 / 200;
+      object-fit: cover;
+      @include sp {
+        aspect-ratio: 375 / 300;
+      }
+    }
+  }
+  &__contents {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    h1 {
+      color: #fff;
+      font-size: vw(25, 1080);
+      font-weight: bold;
+      line-height: 1.5;
+      @include sp {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+

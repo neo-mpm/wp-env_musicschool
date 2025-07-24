@@ -1,0 +1,19 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+// サイドバー　カテゴリー一覧
+.p-side-category {
+  &__contents {
+    ul {
+      li {
+        border-bottom: 0.1rem solid #000;
+        a {
+          height: 4.6rem;
+          display: flex;
+          align-items: center;
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+}

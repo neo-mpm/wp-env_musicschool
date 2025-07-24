@@ -1,0 +1,47 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+// サイドバー　検索
+.p-side-search {
+  &__contents {
+    padding: 1.5rem;
+    border: 0.1rem solid #000;
+    @include sp {
+      padding: 2rem;
+    }
+  }
+  form {
+    display: flex;
+    input {
+      display: block;
+      flex: 1;
+      height: 4rem;
+      background: #e8e8e8;
+      padding-inline: 1rem;
+      font-size: 1.4rem;
+      @include sp {
+        height: 5.4rem;
+      }
+    }
+    button {
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      background: #000;
+      display: grid;
+      place-content: center;
+      flex-shrink: 0;
+      @include sp {
+        width: 5.4rem;
+        height: 5.4rem;
+      }
+      span {
+        display: block;
+        width: 2rem;
+        @include sp {
+          width: 2.6rem;
+        }
+      }
+    }
+  }
+}

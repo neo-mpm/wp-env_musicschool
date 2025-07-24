@@ -1,0 +1,198 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+// ブログ詳細
+.p-blog-details {
+  &__img-area {
+    position: relative;
+
+    img {
+      aspect-ratio: 600 / 350;
+      object-fit: cover;
+
+      @include sp {
+        aspect-ratio: 335 / 200;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 4.6rem;
+
+    @include sp {
+      margin-top: 3rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: calc(40 / 25);
+
+      @include sp {
+        font-size: 2rem;
+        line-height: calc(30 / 20);
+      }
+    }
+  }
+
+  &__date {
+    margin-top: 0.5rem;
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+
+    @include sp {
+      margin-top: 0.6rem;
+    }
+  }
+
+  &__sns {
+    margin-top: 2rem;
+  }
+
+  &__contents {
+    margin-top: 4.8rem;
+
+    @include sp {
+      margin-top: 2.7rem;
+    }
+  }
+
+  &__wp-editor {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+
+    @include sp {
+      font-size: 1.6rem;
+      line-height: calc(30 / 16);
+    }
+
+    h2 {
+      margin-block: 3.3rem 1.5rem;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: calc(40 / 20);
+
+      @include sp {
+        line-height: calc(30 / 20);
+      }
+    }
+
+    h3 {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-block: 4.3rem 1.7rem;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: calc(40 / 20);
+
+      @include sp {
+        margin-bottom: 2rem;
+        line-height: calc(30 / 20);
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0.3rem;
+        height: 2rem;
+        height: calc(100% - 2rem);
+        content: '';
+        background: #000;
+        transform: translateY(-50%);
+
+        @include sp {
+          height: calc(100% - 1rem);
+        }
+      }
+    }
+
+    p {
+      margin-block: 1.7rem;
+    }
+
+    p:has(img) {
+      margin-block: 1.7rem;
+
+      @include sp {
+        margin-top: 3.9rem;
+      }
+
+      img {
+        width: 30rem;
+        aspect-ratio: 300 / 200;
+        object-fit: cover;
+
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+
+    blockquote {
+      position: relative;
+      display: flex;
+      column-gap: 0.8rem;
+      padding: 1.8rem 3rem 1rem;
+      margin-block: 1.7rem 2.9rem;
+      background: $gray;
+      border: none;
+
+      @include sp {
+        column-gap: 1.7rem;
+        padding: 1.7rem 2rem 1.1rem 2.5rem;
+        margin-bottom: 2.6rem;
+      }
+
+      &::before {
+        display: inline-block;
+        width: 2.7rem;
+        height: 2.34rem;
+        content: '';
+        background: url('../images/common/icon-blockquote.svg') center center / contain no-repeat;
+      }
+
+      p {
+        flex: 1;
+        margin: 0;
+      }
+    }
+
+    ul {
+      margin-block: 2.8rem;
+
+      li {
+        padding-left: 1em;
+        font-size: 1.8rem;
+        line-height: 1.6;
+        text-indent: -1em;
+      }
+    }
+
+    hr {
+      width: 100% !important;
+      margin-block: 4.1rem;
+      border-bottom-width: 0.5px;
+
+      @include sp {
+        margin-bottom: 5rem;
+      }
+    }
+
+    a {
+      margin-block: 1.8rem;
+      font-size: 2rem;
+      font-weight: bold;
+      color: $red;
+      text-decoration: underline;
+    }
+  }
+
+  &__pagination {
+    margin-top: 5.4rem;
+
+    @include sp {
+      margin-top: 4rem;
+    }
+  }
+}

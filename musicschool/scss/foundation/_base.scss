@@ -1,0 +1,67 @@
+@use "./variable" as *;
+@use "./mixin" as *;
+
+html {
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-all;
+  scroll-behavior: smooth;
+  font-size: 10px;
+  @media (min-width: 768px) and (max-width: 940px) {
+    font-size: vw(10, 940);
+  }
+  @include sp {
+    font-size: vw(10, 375);
+  }
+}
+body {
+  margin: 0;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  margin-top: 8rem;
+  font-weight: 500;
+  @include sp {
+    margin-top: 5rem;
+  }
+}
+
+main {
+  position: relative;
+}
+
+.inner {
+  width: 88rem;
+  margin-inline: auto;
+  @include sp {
+    width: 33.5rem;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+a,
+button {
+  transition: opacity 0.4s;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+
+.bg-red {
+  background: $red;
+}
+
+@include pc {
+  .pc-none {
+    display: none !important;
+  }
+}
+@include sp {
+  .sp-none {
+    display: none !important;
+
+  }
+}

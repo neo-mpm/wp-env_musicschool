@@ -1,0 +1,193 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+// ブログ一覧、関連記事、おすすめ記事
+.c-blog-list-item {
+  display: flex;
+  column-gap: 5rem;
+  width: 100%;
+
+  @include sp {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  &__img-area {
+    position: relative;
+    font-size: 0;
+
+    @include pc {
+      width: 26rem;
+    }
+  }
+
+  &__img {
+    img {
+      aspect-ratio: 260 / 184;
+      object-fit: cover;
+
+      @include sp {
+        aspect-ratio: 335 / 200;
+      }
+    }
+  }
+
+  &__textarea {
+    flex: 1;
+  }
+
+  &__title {
+    h3 {
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: calc(25 / 20);
+
+      @include sp {
+        line-height: calc(30 / 20);
+      }
+    }
+  }
+
+  &__date {
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+
+    @include sp {
+      margin-top: 0.5rem;
+      text-align: right;
+    }
+  }
+
+  &__text {
+    display: -webkit-box;
+    margin-top: 1rem;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+
+    @include sp {
+      margin-top: 0.8rem;
+      -webkit-line-clamp: 5;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: calc(30 / 18);
+
+      @include sp {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+      }
+    }
+  }
+
+  &--related {
+    column-gap: 3rem;
+
+    @include sp {
+      flex-direction: row;
+      column-gap: 2rem;
+    }
+
+    .c-blog-list-item__img-area {
+      width: 20rem;
+
+      @include sp {
+        width: 16rem;
+      }
+
+      img {
+        aspect-ratio: 200 / 140;
+        object-fit: cover;
+      }
+    }
+
+    .c-blog-list-item__textarea {
+      @include sp {
+        margin-top: 0.8rem;
+      }
+    }
+
+    .c-blog-list-item__title {
+      h3 {
+        @include sp {
+          display: -webkit-box;
+          overflow: hidden;
+          font-size: 1.7rem;
+          line-height: calc(28 / 17);
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+      }
+    }
+
+    .c-blog-list-item__date {
+      margin-top: 1.3rem;
+
+      @include sp {
+        margin-top: 0.4rem;
+        text-align: left;
+      }
+    }
+  }
+
+  &--related-result {
+    .c-blog-list-item__img-area {
+      width: 26rem;
+
+      @include sp {
+        width: 16rem;
+      }
+
+      img {
+        aspect-ratio: 200 / 140;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &--recommend {
+    column-gap: 1.5rem;
+
+    @include sp {
+      flex-direction: row;
+      column-gap: 2rem;
+    }
+
+    .c-blog-list-item__img {
+      width: 9.5rem;
+
+      @include sp {
+        width: 16rem;
+      }
+
+      img {
+        aspect-ratio: 95 / 75;
+        object-fit: cover;
+
+        @include sp {
+          aspect-ratio: 160 / 110;
+        }
+      }
+    }
+
+    .c-blog-list-item__textarea {
+      @include sp {
+        margin-top: 1rem;
+      }
+    }
+
+    .c-blog-list-item__title {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+
+      h3 {
+        font-size: 1.7rem;
+        font-weight: 500;
+        line-height: calc(28 / 17);
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+// TOPのブログ、卒業実績一覧
+.c-blog-item {
+  width: 100%;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  row-gap: 1.6rem;
+  column-gap: 0;
+  @include sp {
+    row-gap: 0.6rem;
+  }
+  &__img-area {
+    position: relative;
+    font-size: 0;
+  }
+  &__img {
+    img {
+      aspect-ratio: 260 / 200;
+      object-fit: cover;
+      @include sp {
+        aspect-ratio: 335 / 200;
+      }
+    }
+  }
+  &__title {
+    @include sp {
+      margin-top: 2.4rem;
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: calc(25 / 20);
+      @include sp {
+        line-height: calc(30 / 20);
+      }
+    }
+  }
+  &__date {
+    text-align: right;
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+  }
+  &--result {
+    .c-blog-item__img {
+      img {
+        aspect-ratio: 387 / 273;
+      }
+    }
+  }
+}

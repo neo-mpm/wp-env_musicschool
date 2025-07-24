@@ -1,0 +1,54 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+// 共通見出し
+.c-head-middle {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: calc(50 / 30);
+  @include sp {
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
+  }
+  &--white {
+    color: #fff;
+  }
+}
+
+
+// 下層ページ共通見出し
+.c-head-lower {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  &--title {
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: left;
+    position: relative;
+    &-em {
+      font-weight: bold;
+    }
+  }
+  &--count {
+    position: absolute;
+    right: 0;
+  }
+}
+
+// サイドバーのタイトル
+.c-side-title {
+  height: 5rem;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: bold;
+  }
+}

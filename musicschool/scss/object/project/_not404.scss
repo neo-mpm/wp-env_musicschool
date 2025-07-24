@@ -1,0 +1,31 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+// 404
+.p-not-found {
+  padding-block: 6.8rem 9rem;
+  @include sp {
+    padding-block: 4.7rem 5rem;
+  }
+  &__text {
+    @include pc {
+      text-align: center;
+    }
+    p {
+      font-size: 1.8rem;
+      line-height: calc(30 / 18);
+      @include sp {
+        font-size: 1.6rem;
+        line-height: calc(30 / 16);
+      }
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    @include sp {
+      margin-top: 0.9rem;
+    }
+  }
+}

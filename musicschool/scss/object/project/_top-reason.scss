@@ -1,0 +1,84 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+// トップ　選ばれる理由
+.p-reason {
+  padding-block: 6.4rem 7rem;
+  @include sp {
+    padding-block: 4.9rem 4.1rem;
+  }
+  &__contents {
+    margin-top: 2.8rem;
+    @include sp {
+      margin-top: 3.6rem;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+    @include sp {
+      row-gap: 3.9rem;
+    }
+  }
+  .p-reason-item {
+    display: flex;
+    @include sp {
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+    &__img {
+      width: 35rem;
+      @include sp {
+        width: 100%;
+      }
+      img {
+        aspect-ratio: 350 / 247;
+        object-fit: cover;
+        @include sp {
+          aspect-ratio: 335 / 200;
+        }
+      }
+    }
+    &__textarea {
+      flex: 1;
+      @include pc {
+        margin-top: 0.7rem;
+      }
+    }
+    &__head {
+      padding-bottom: 1.2rem;
+      padding-left: 5rem;
+      border-bottom: 0.2rem solid $red;
+      @include sp {
+        padding-bottom: 1rem;
+        padding-left: 0;
+      }
+      h3 {
+        font-size: 2.2rem;
+        line-height: calc(33 / 22);
+        font-weight: bold;
+        @include sp {
+          font-size: 2rem;
+          line-height: calc(30 / 20);
+        }
+      }
+    }
+    &__text {
+      padding-left: 5rem;
+      margin-top: 3.7rem;
+      @include sp {
+        padding-left: 0;
+        margin-top: 1.7rem;
+      }
+      p {
+        font-size: 1.8rem;
+        line-height: calc(33 / 18);
+        @include sp {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+

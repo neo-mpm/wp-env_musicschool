@@ -1,0 +1,10 @@
+
+$red: rgb(203,0,0);
+$gray: rgb(232,232,232);
+
+
+
+// vw関数
+@function vw($pixelsVw, $baseWidth: 1080) {
+  @return calc($pixelsVw / $baseWidth * 100vw);
+}
